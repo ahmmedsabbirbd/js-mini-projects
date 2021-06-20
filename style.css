@@ -1,0 +1,34 @@
+#result {
+  height: 100%;
+} 
+#edit {
+  width: 100%;
+}
+
+/* COUSTOM CLASS */
+.code-inline {
+  padding: 3px;
+  border-radius: 0.5rem;
+  color: rgb(78, 204, 163);
+  background-color: rgba(78, 204, 163, 0.08);
+}
+.code-block {
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #393e46;
+}
+mark {
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: rgba(78, 204, 163, 0.1);
+}
+ins {
+  text-decoration: underline;
+  text-decoration-color: rgb(78, 204, 163);
+}
+.quote {
+  padding: 5px;
+  line-height: normal;
+  border-left: #232931 solid 5px;
+}
