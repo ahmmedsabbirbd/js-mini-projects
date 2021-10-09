@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+	<style>
+		html {
+		  text-align: center;
+		  font-family: calibri, arial, sans-serif;
+		}
+		.location {
+		  display: block;
+		  font-size: 0.8em;
+		}
+	</style>
+<body>
+	<h1>Your current location is: <span class="location"></span></h1>
+</body>
+	<script ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+	var $locationText = $(".location");
+
+	// Check for geolocation browser support and execute success method
+	if (navigator.geolocation) {
+	  navigator.geolocation.getCurrentPosition(
+	    geoLocationSuccess,
+	    geoLocationError,
+	    { timeout: 10000 }
+	  );
+	} else {
+	  alert("your browser doesn't support geolocation");
+	}
+	function geoLocationSuccess(pos) {
+	  // get user lat,long
+	  var myLat = pos.coords.latitude,
+	    myLng = pos.coords.longitude,
+	    loadingTimeout;
+	document.write(myLat + '<br>');
+	document.write(myLng);
+
+	  var loading = function () {
+	    $locationText.text("fetching...");
+	  };
+
+	  loadingTimeout = setTimeout(loading, 600);
+
+	  var request = $.get(
+	    "https://nominatim.openstreetmap.org/reverse?format=json&lat=" +
+	      myLat +
+	      "&lon=" +
+	      myLng
+	  )
+	    .done(function (data) {
+	      if (loadingTimeout) {
+	        clearTimeout(loadingTimeout);
+	        loadingTimeout = null;
+	        $locationText.text(data.display_name);
+	      }
+	    })
+	    .fail(function () {
+	      // handle error
+	    });
+	}
+
+	function geoLocationError(error) {
+	  var errors = {
+	    1: "Permission denied",
+	    2: "Position unavailable",
+	    3: "Request timeout"
+	  };
+	  alert("Error: " + errors[error.code]);
+	}
+
+</script>
+</html>
