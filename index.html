@@ -2,6 +2,50 @@
 <html>
 <head>
 
+  <!-- <!DOCTYPE html>
+  <html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <center><br>
+   <h2>Display google sheet data on webpage</h2>
+   <table border="3" style="border:2px solid black" cellpadding="5px" >
+    <?var tableData = getSheetData();?>
+    <?for(var i = 0; i < tableData.length; i++) { ?>
+      <?if(i == 0) { ?>
+        <tr>
+        <?for(var j = 0; j < tableData[i].length; j++) { ?>
+        <th><?= tableData[i][j] ?></th>
+        <? } ?>
+        </tr>
+      <? } else { ?>
+        <tr>
+        <?for(var j = 0; j < tableData[i].length; j++) { ?>
+        <td><?= tableData[i][j] ?></td>
+        <? } ?>
+        </tr>
+      <? } ?>
+    <? } ?>
+    </table></center>
+  </body>
+  </html> -->
+
+  <!-- function doGet(e) {
+      var x = HtmlService.createTemplateFromFile("");
+      var y = x.evaluate();
+      var z = y.setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+      return z;
+    }
+
+    function getSheetData()  { 
+      var a= SpreadsheetApp.getActiveSpreadsheet();
+      var b = a.getSheetByName('Sheet1'); 
+      var c = b.getDataRange();
+      return c.getValues();  
+    } -->
+
+
     <!-- var sheetName = 'Sheet1'
     var scriptProp = PropertiesService.getScriptProperties()
 
@@ -67,6 +111,10 @@
 
     <input type="submit" name="submit">
 </form>
+
+  <div style="width: 100%; margin-top: 30px; height: 100%; "> 
+    <iframe width="100%" height="500px" src="https://script.google.com/macros/s/AKfycbxayCXQfc3ljfhIxFCXfvM73yos40f__wH9hBFQT4ImVascVOyUtRuhMP9y3ZsmEHsT/exec"></iframe>
+  <div>
   <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
