@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Api</title>
+</head>
+
+<body>
+
+    <div id="datashow"></div>
+
+</body>
+<script>
+    fetch('https://ahmmedsabbirbd.github.io/portfolio-item/index.text').then((data) => {
+
+        return data.json();
+    }).then((completedata) => {
+
+        let data1 = "";
+        completedata.map((value) => {
+            data1 += `<h2>${value.title}</h2> 
+                <img src="${value.image}" alt="">
+            `;
+
+        })
+        document.getElementById('datashow').innerHTML = data1;
+
+        console.log(completedata[2].title);
+    }).catch((err) => {
+        console.lop(err);
+    });
+
+</script>
+
+</html>
