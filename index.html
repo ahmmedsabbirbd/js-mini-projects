@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>sendEmail</title>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center">
+          <h2>Contact Us</h2>
+        </div>
+        <div class="row">
+            <form id="submit-form">
+              <label for="name">First Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name.." required>
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email name.." required>
+              <label for="country">Country</label>
+              <select id="country" name="country" required>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                <option value="Bangladesh">Bangladesh</option>
+            </select>
+            <label for="message">Message</label>
+            <textarea id="subject" name="message" placeholder="Write something.." style="height:170px" required></textarea>
+            <input type="submit" id="form-submit-btn" value="Submit">
+        </form> 
+    </div>
+</div>
+<script src="jquery-1.12.4.min.js"></script>
+      <script>
+        $("#submit-form").submit((e)=>{
+            document.getElementById('form-submit-btn').disabled = true;
+            e.preventDefault()
+            
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbwKdHSEURfIQZwwbIW3gXX8nOYqLS2MTsDiyFgkaHNtHZNFe_aWpUuUk0y_hWI1n0oQDQ/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                },
+                error:function (err){
+                    alert("Something Error")
+                }
+            })
+        })
+    </script>
+</body>
+</html>
