@@ -27,12 +27,6 @@
             /* height: 190px; */
         }
 
-        .irs {
-            width: 475px;
-            max-width: 100%;
-            margin: 0 auto;
-        }
-
         .irs .irs-bar {
 
         }
@@ -68,6 +62,36 @@
         .irs .irs-min, .irs .irs-max, .irs .irs-single {
             display: none !important;
         }
+
+        .grid-number-wrapper button {
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            position: absolute;
+            background-color: transparent;
+        }
+
+        .grid-number-wrapper button:nth-child(1) { left: 4.4%;}
+        .grid-number-wrapper button:nth-child(2) { left: 13.3%;}
+        .grid-number-wrapper button:nth-child(3) { left: 23.3%;}
+        .grid-number-wrapper button:nth-child(4) { left: 33.3%;}
+        .grid-number-wrapper button:nth-child(5) { left: 43.3%;}
+        .grid-number-wrapper button:nth-child(6) { left: 53.3%;}
+        .grid-number-wrapper button:nth-child(7) { left: 63.3%;}
+        .grid-number-wrapper button:nth-child(8) { left: 73.3%}
+        .grid-number-wrapper button:nth-child(9) { left: 83.3%;}
+        .grid-number-wrapper button:nth-child(10) { left: 93.3%;}
+
+        .rangeSlider-wrapper {
+            width: 475px;
+            margin: 0 auto;
+            max-width: 100%;
+            position: relative;
+        }
+        
     </style>
 </head>
 <body>
@@ -75,11 +99,23 @@
         <div class="my-canvas-wrapper">
             <canvas id="my-canvas" width="382" height="190"></canvas>
         </div>
-        <canvas id="myCanvas" width="380" height="300" style="display: none;"></canvas>
-        <input type="text" id="rangeSlider" class="js-range-slider" name="my_range" value="">
-        
+        <div class="rangeSlider-wrapper">
+            <input type="text" id="rangeSlider" class="js-range-slider" name="my_range" value="">
+            <div class="grid-number-wrapper">
+                <button onclick="onClickValue(0)">0°</button>
+                <button onclick="onClickValue(42.22222222222222)">10°</button>
+                <button onclick="onClickValue(84.44444444444444)">20°</button>
+                <button onclick="onClickValue(126.6666666666667)">30°</button>
+                <button onclick="onClickValue(168.8888888888889)">40°</button>
+                <button onclick="onClickValue(211.1111111111111)">50°</button>
+                <button onclick="onClickValue(253.3333333333333)">60°</button>
+                <button onclick="onClickValue(295.5555555555555)">70°</button>
+                <button onclick="onClickValue(337.7777777777778)">80°</button>
+                <button onclick="onClickValue(380)">90°</button>
+            </div>
+        </div>
     </div>
-    <input type="text" class="js-input" value="0" />
+    <input type="text" style="display: none;" class="js-input" value="0" />
 
 
     <script src="js/plugins.js"></script>

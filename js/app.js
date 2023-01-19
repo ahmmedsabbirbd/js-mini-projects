@@ -14,8 +14,7 @@ function drawTriangle(context, point1, point2, point3) {
 
 const canvas = document.querySelector('#my-canvas');
 const context = canvas.getContext('2d');
-const input = document.querySelector('.js-input');
-console.log(input);
+const $input = $(".js-input")
 
 const point1 = {x: 2,  y: 190};
 const point2 = {x: 380, y: 190};
@@ -38,8 +37,8 @@ const currentValue380 = c => {
     
     return n;
 }
-
-$("#rangeSlider").ionRangeSlider({
+const $range = $("#rangeSlider");
+$range.ionRangeSlider({
     type: "single",
     min: 0,
     max: 380,  // Angle can range from 0 to 90 degrees
@@ -66,5 +65,46 @@ $("#rangeSlider").ionRangeSlider({
         } else {
             document.querySelector('#my-canvas').style.borderBottom = '3px solid transparent';
         }
+    },
+    onUpdate: function(data) {
+        // Clear canvas
+        context.clearRect(0, 0, 380, 190);
+        let rangeValue = data.from;
+
+        if(rangeValue > 190) {
+            let currentRangeValue = currentValue380(rangeValue);
+            drawTriangleChart(currentRangeValue, 0);
+        } else {
+            let currentRangeValue = currentValue380(rangeValue);
+            drawTriangleChart(190, currentRangeValue);
+        }
+
+        if(rangeValue < 3) {
+            document.querySelector('#my-canvas').style.borderBottom = '3px solid #F7CA63';
+        } else {
+            document.querySelector('#my-canvas').style.borderBottom = '3px solid transparent';
+        }
     }
-  });
+});
+
+const instance = $range.data("ionRangeSlider");
+$input.on("change keyup", function() {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < 0) {
+        val = min;
+    } else if (val > 380) {
+        val = max;
+    }
+
+    instance.update({
+        from: val
+    });
+});
+
+const onClickValue = (value)=> {
+    instance.update({
+        from: value
+    });
+}
