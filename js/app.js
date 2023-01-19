@@ -1,60 +1,3 @@
-// Get canvas and context
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-
-// Draw triangle
-// function triangle(a, b) {
-//   ctx.beginPath();
-//   ctx.moveTo(0, 0);
-//   ctx.moveTo(a, 150);
-  
-//   ctx.lineTo(300, 300);
-//   ctx.lineTo(30, 300);
-//   ctx.lineTo(0, 300);
-  
-//   ctx.closePath();
-//   ctx.fillStyle = "#FFF1D6";
-//   ctx.fill();
-//   ctx.strokeStyle = "#F7CA63";
-//   ctx.lineWidth = 2; 
-//   ctx.stroke();
-// }
-
-// triangle(150);
-
-// Initialize ionRangeSlider
-// $("#rangeSlider").ionRangeSlider({
-//   type: "single",
-//   min: 0,
-//   max: 90,  // Angle can range from 0 to 90 degrees
-//   from: 90,
-//   grid: true,
-//   postfix: "°",
-//   onChange: function(data) {
-//     // Clear canvas
-//     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-//     const rangeValue = data.from;
-
-//     if(rangeValue >= 45) {
-//         console.log(rangeValue);
-//         // triangle(100);
-//     } else {
-
-//     }
-//   }
-// });
-
-
-
-
-
-
-
-
-
-1
-// new demo
 function drawTriangle(context, point1, point2, point3) {
     context.beginPath();
     context.moveTo(point1.x, point1.y);
@@ -69,8 +12,10 @@ function drawTriangle(context, point1, point2, point3) {
     context.shadowColor = "#F7CA63";
 }
 
-var canvas = document.querySelector('#my-canvas');
-var context = canvas.getContext('2d');
+const canvas = document.querySelector('#my-canvas');
+const context = canvas.getContext('2d');
+const input = document.querySelector('.js-input');
+console.log(input);
 
 const point1 = {x: 2,  y: 190};
 const point2 = {x: 380, y: 190};

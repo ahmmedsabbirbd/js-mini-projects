@@ -12,11 +12,12 @@
             /* max-width: 310px; */
             margin-left: auto;
             margin-right: auto;
+            text-align: center;
         }
 
         canvas {
             max-width: 100%;
-            border-bottom-width: 3px;
+            border-bottom: 3px solid transparent;
         /*     transform: rotate(270deg); */
         /*     transform-origin: 100px 100px; */
         }
@@ -29,6 +30,7 @@
         .irs {
             width: 475px;
             max-width: 100%;
+            margin: 0 auto;
         }
 
         .irs .irs-bar {
@@ -46,6 +48,7 @@
         .irs .irs-handle {
             width: 30px;
             height: 30px;
+            cursor: pointer;
             background: #5e546e !important;
 
             top: 0; 
@@ -74,7 +77,9 @@
         </div>
         <canvas id="myCanvas" width="380" height="300" style="display: none;"></canvas>
         <input type="text" id="rangeSlider" class="js-range-slider" name="my_range" value="">
+        
     </div>
+    <input type="text" class="js-input" value="0" />
 
 
     <script src="js/plugins.js"></script>
