@@ -9,7 +9,7 @@
     <style>
         .center {
             padding: 10%;
-            max-width: 310px;
+            /* max-width: 310px; */
             margin-left: auto;
             margin-right: auto;
         }
@@ -22,8 +22,48 @@
         }
 
         .my-canvas-wrapper {
-            width: 380px;
-            height: 190px;
+            /* width: 380px; */
+            /* height: 190px; */
+        }
+
+        .irs {
+            width: 475px;
+            max-width: 100%;
+        }
+
+        .irs .irs-bar {
+
+        }
+
+        .irs .irs-line {
+            border: 0;
+            height: 30px;
+            top: 0 !important;
+            background: #d8e0f3;
+            border-radius: .9375rem;
+        }
+
+        .irs .irs-handle {
+            width: 30px;
+            height: 30px;
+            background: #5e546e !important;
+
+            top: 0; 
+            border: 0;  
+            box-shadow: none;
+            border-radius: 500px;
+        }
+
+        .irs {
+            height: 30px;
+        }
+
+        .irs .irs-bar {
+            display: none;
+        }
+
+        .irs .irs-min, .irs .irs-max, .irs .irs-single {
+            display: none !important;
         }
     </style>
 </head>

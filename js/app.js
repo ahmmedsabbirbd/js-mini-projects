@@ -98,8 +98,10 @@ $("#rangeSlider").ionRangeSlider({
     type: "single",
     min: 0,
     max: 380,  // Angle can range from 0 to 90 degrees
+    skin: "big", 
     from: 380,
-    grid: true,
+    // grid: true,
+    // grid_num: 10, 
     onChange: function(data) {
         // Clear canvas
         context.clearRect(0, 0, 380, 190);
