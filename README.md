@@ -5,7 +5,7 @@ Building a Weather Application
 
 And it's assignment projects of Mastering Vue.js.
 
-![Building a Weather Application](https://raw.githubusercontent.com/ahmmedsabbirbd/weather-app/main/public/documentation/wellcome.png)
+![Building a Weather Application](https://raw.githubusercontent.com/ahmmedsabbirbd/weather-app/master/public/documentation/wellcome.png)
 
 ## Table of Contents
 
@@ -14,7 +14,6 @@ And it's assignment projects of Mastering Vue.js.
 - [Demo](#demo)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Laravel Query Builder](#Laravel-Query-Builder)
 - [Usage](#usage)
 - [API Documentation](#api-documentation)
 - [Contributing](#contributing)
@@ -31,12 +30,13 @@ The weather-app is a simple Weather Application with HTML, CSS, Bootstrap, and J
 |  Javascripts  | Use es6 |
 |  Vite         | Vanilla Javascripts with Vite |
 |  Bootstrap    | Use Bootsrap |
+|  Responsive    | All device supported |
 
 
 ## Demo
 Project Home Page
 
-[![Demo Video](https://raw.githubusercontent.com/ahmmedsabbirbd/weather-app/main/public/documentation/wellcome.png)](https://youtu.be/RYAh3rSyWHs)
+[![Demo Video](https://raw.githubusercontent.com/ahmmedsabbirbd/weather-app/master/public/documentation/wellcome.png)](https://youtu.be/RYAh3rSyWHs)
 
 ## Technologies Used
 
