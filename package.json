@@ -1,0 +1,23 @@
+{
+  "name": "form-submit-robot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmmedsabbirbd/js-mini-projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmmedsabbirbd/js-mini-projects/issues"
+  },
+  "homepage": "https://github.com/ahmmedsabbirbd/js-mini-projects#readme",
+  "dependencies": {
+    "exec-php": "^0.0.6",
+    "puppeteer": "^21.0.3"
+  }
+}
